@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest - Case Study | María Eugenia Máspoli</title>
+  <meta name="description" content="Case study del diseño UX/UI y desarrollo fullstack de Quest, una app móvil para encontrar y reservar estacionamientos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#problem">Problema</a>
+    <a href="#process">Proceso</a>
+    <a href="#design">Diseño</a>
+    <a href="#features">Features</a>
+    <a href="#cta">Contacto</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__label" data-lang="es">UX/UI Design · FullStack Mobile</span>
+        <span class="hero__label" data-lang="en" style="display: none;">UX/UI Design · FullStack Mobile</span>
+        
+        <h1 class="hero__title">
+          <span data-lang="es">[Quest]</span>
+          <span data-lang="en" style="display: none;">[Quest]</span>
+        </h1>
+        <span class="hero__tagline" data-lang="es">App de estacionamientos</span>
+        <span class="hero__tagline" data-lang="en" style="display: none;">Parking App</span>
+        
+        <p class="hero__subtitle" data-lang="es">
+          Conceptualización, diseño integral de producto y desarrollo fullstack de una aplicación móvil que conecta conductores con estacionamientos disponibles, asegurando su espacio ideal en segundos.
+        </p>
+        <p class="hero__subtitle" data-lang="en" style="display: none;">
+          Conceptualization, integral product design and fullstack development of a mobile app that connects drivers with available parking spots, ensuring your ideal space in seconds.
+        </p>
+        
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label" data-lang="es">Año</span>
+            <span class="hero__meta-label" data-lang="en" style="display: none;">Year</span>
+            <span class="hero__meta-value">2022</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label" data-lang="es">Tipo</span>
+            <span class="hero__meta-label" data-lang="en" style="display: none;">Type</span>
+            <span class="hero__meta-value" data-lang="es">Proyecto Académico</span>
+            <span class="hero__meta-value" data-lang="en" style="display: none;">Academic Project</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label" data-lang="es">Rol</span>
+            <span class="hero__meta-label" data-lang="en" style="display: none;">Role</span>
+            <span class="hero__meta-value" data-lang="es">UX/UI Designer + Developer</span>
+            <span class="hero__meta-value" data-lang="en" style="display: none;">UX/UI Designer + Developer</span>
+          </div>
+        </div>
+        
+        <div class="hero__tools">
+          <span class="hero__tool">Figma</span>
+          <span class="hero__tool">React Native</span>
+          <span class="hero__tool">Node.js</span>
+          <span class="hero__tool">Express</span>
+          <span class="hero__tool">JavaScript</span>
+        </div>
+      </div>
+      
+      <div class="hero__visual">
+        <div class="hero__glow"></div>
+        <div class="hero__device device-frame">
+          <img src="assets/img/quest1.webp" alt="Quest App Splash Screen">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem section" id="problem">
+    <div class="container">
+      <div class="problem__content">
+        <span class="section-label" data-lang="es">El problema</span>
+        <span class="section-label" data-lang="en" style="display: none;">The problem</span>
+        
+        <h2 data-lang="es">¿Por qué Quest?</h2>
+        <h2 data-lang="en" style="display: none;">Why Quest?</h2>
+        
+        <div class="problem__items">
+          <div class="problem__item fade-in">
+            <div class="problem__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+            </div>
+            <div class="problem__text">
+              <h3 data-lang="es">Dificultad para encontrar estacionamiento</h3>
+              <h3 data-lang="en" style="display: none;">Difficulty finding parking</h3>
+              <p data-lang="es">Encontrar un lugar para estacionar, ya sea temporal o fijo, es un desafío diario en la ciudad.</p>
+              <p data-lang="en" style="display: none;">Finding a place to park, whether temporary or permanent, is a daily challenge in the city.</p>
+            </div>
+          </div>
+          
+          <div class="problem__item fade-in">
+            <div class="problem__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
+            </div>
+            <div class="problem__text">
+              <h3 data-lang="es">Sobrepoblación de vehículos</h3>
+              <h3 data-lang="en" style="display: none;">Vehicle overcrowding</h3>
+              <p data-lang="es">Especialmente en barrios altamente concurridos, la demanda supera la oferta de estacionamientos.</p>
+              <p data-lang="en" style="display: none;">Especially in busy neighborhoods, demand exceeds parking supply.</p>
+            </div>
+          </div>
+          
+          <div class="problem__item fade-in">
+            <div class="problem__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="problem__text">
+              <h3 data-lang="es">Tarifas elevadas</h3>
+              <h3 data-lang="en" style="display: none;">High prices</h3>
+              <p data-lang="es">Los alquileres y tarifas de estacionamientos son costosos, generando dificultad para alquilar más de uno.</p>
+              <p data-lang="en" style="display: none;">Parking rentals and rates are expensive, making it difficult to rent more than one.</p>
+            </div>
+          </div>
+          
+          <div class="problem__item fade-in">
+            <div class="problem__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+              </svg>
+            </div>
+            <div class="problem__text">
+              <h3 data-lang="es">Publicaciones dispersas</h3>
+              <h3 data-lang="en" style="display: none;">Scattered listings</h3>
+              <p data-lang="es">Los alquileres de estacionamientos mensuales están dispersos por diferentes plataformas.</p>
+              <p data-lang="en" style="display: none;">Monthly parking rentals are scattered across different platforms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution section" id="solution">
+    <div class="container">
+      <div class="solution__content">
+        <span class="section-label" data-lang="es">La solución</span>
+        <span class="section-label" data-lang="en" style="display: none;">The solution</span>
+        
+        <h2 data-lang="es">Una plataforma integral</h2>
+        <h2 data-lang="en" style="display: none;">A comprehensive platform</h2>
+        
+        <div class="solution__items">
+          <div class="solution__item fade-in">
+            <div class="solution__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+              </svg>
+            </div>
+            <div class="solution__item-content">
+              <h3 class="solution__item-title" data-lang="es">Plataforma única</h3>
+              <h3 class="solution__item-title" data-lang="en" style="display: none;">Unified platform</h3>
+              <p class="solution__item-desc" data-lang="es">Una plataforma única para la venta y alquileres de estacionamientos.</p>
+              <p class="solution__item-desc" data-lang="en" style="display: none;">A single platform for parking sales and rentals.</p>
+            </div>
+          </div>
+          
+          <div class="solution__item fade-in">
+            <div class="solution__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <div class="solution__item-content">
+              <h3 class="solution__item-title" data-lang="es">Red de estacionamientos</h3>
+              <h3 class="solution__item-title" data-lang="en" style="display: none;">Parking network</h3>
+              <p class="solution__item-desc" data-lang="es">Generar una red de estacionamientos para el alquiler.</p>
+              <p class="solution__item-desc" data-lang="en" style="display: none;">Generate a network of parking lots for rent.</p>
+            </div>
+          </div>
+          
+          <div class="solution__item fade-in">
+            <div class="solution__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
+              </svg>
+            </div>
+            <div class="solution__item-content">
+              <h3 class="solution__item-title" data-lang="es">Sistema de suscripción</h3>
+              <h3 class="solution__item-title" data-lang="en" style="display: none;">Subscription system</h3>
+              <p class="solution__item-desc" data-lang="es">Un sistema de suscripción que facilite el alquiler de más de un estacionamiento.</p>
+              <p class="solution__item-desc" data-lang="en" style="display: none;">A subscription system that facilitates renting more than one parking spot.</p>
+            </div>
+          </div>
+          
+          <div class="solution__item fade-in">
+            <div class="solution__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <div class="solution__item-content">
+              <h3 class="solution__item-title" data-lang="es">Gestión rápida y simple</h3>
+              <h3 class="solution__item-title" data-lang="en" style="display: none;">Quick and simple management</h3>
+              <p class="solution__item-desc" data-lang="es">Gestión de reserva sencilla y rápida con horario específico.</p>
+              <p class="solution__item-desc" data-lang="en" style="display: none;">Simple and quick reservation management with specific schedule.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="solution__visual fade-in-left">
+        <div class="solution__glow"></div>
+        <div class="solution__devices">
+          <div class="solution__device device-frame">
+            <img src="assets/img/quest5.webp" alt="Quest Search">
+          </div>
+          <div class="solution__device device-frame">
+            <img src="assets/img/quest6.webp" alt="Quest Map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process section" id="process">
+    <div class="container">
+      <span class="section-label" data-lang="es">El proceso</span>
+      <span class="section-label" data-lang="en" style="display: none;">The process</span>
+      
+      <h2 data-lang="es">Proceso de diseño</h2>
+      <h2 data-lang="en" style="display: none;">Design process</h2>
+      
+      <div class="process__timeline">
+        <div class="process__line"></div>
+        
+        <div class="process__step">
+          <div class="process__dot"></div>
+          <span class="process__number" data-lang="es">Fase 01</span>
+          <span class="process__number" data-lang="en" style="display: none;">Phase 01</span>
+          <h3 class="process__title" data-lang="es">Empatizar</h3>
+          <h3 class="process__title" data-lang="en" style="display: none;">Empathize</h3>
+          <p class="process__desc" data-lang="es">Análisis de usuarios para definir el usuario objetivo, sus perfiles y el mapa de empatía.</p>
+          <p class="process__desc" data-lang="en" style="display: none;">User analysis to define the target user, their profiles, and the empathy map.</p>
+          <div class="process__details">
+            <span class="process__detail-tag" data-lang="es">Usuario objetivo</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Target user</span>
+            <span class="process__detail-tag" data-lang="es">Perfiles de usuario</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">User profiles</span>
+            <span class="process__detail-tag" data-lang="es">Mapa de empatía</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Empathy map</span>
+          </div>
+        </div>
+        
+        <div class="process__step">
+          <div class="process__dot"></div>
+          <span class="process__number" data-lang="es">Fase 02</span>
+          <span class="process__number" data-lang="en" style="display: none;">Phase 02</span>
+          <h3 class="process__title" data-lang="es">Definir</h3>
+          <h3 class="process__title" data-lang="en" style="display: none;">Define</h3>
+          <p class="process__desc" data-lang="es">Necesidades del usuario, análisis de la competencia, diferencial y propuesta de valor.</p>
+          <p class="process__desc" data-lang="en" style="display: none;">User needs, competitive analysis, differentiator and value proposition.</p>
+          <div class="process__details">
+            <span class="process__detail-tag" data-lang="es">Necesidades del usuario</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">User needs</span>
+            <span class="process__detail-tag" data-lang="es">Análisis de la competencia</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Competitive analysis</span>
+            <span class="process__detail-tag" data-lang="es">Diferencial y propuesta de valor</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Differentiator &amp; value proposition</span>
+          </div>
+        </div>
+        
+        <div class="process__step">
+          <div class="process__dot"></div>
+          <span class="process__number" data-lang="es">Fase 03</span>
+          <span class="process__number" data-lang="en" style="display: none;">Phase 03</span>
+          <h3 class="process__title" data-lang="es">Idear</h3>
+          <h3 class="process__title" data-lang="en" style="display: none;">Ideate</h3>
+          <p class="process__desc" data-lang="es">Viaje del usuario, arquitectura de información, benchmark y visión de experiencia: qué queremos hacer sentir, conceptos, personalidad, atributos y asociaciones.</p>
+          <p class="process__desc" data-lang="en" style="display: none;">User journey, information architecture, benchmark and experience vision: what we want to convey, concepts, personality, attributes and associations.</p>
+          <div class="process__details">
+            <span class="process__detail-tag" data-lang="es">Viaje del usuario</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">User journey</span>
+            <span class="process__detail-tag" data-lang="es">Arquitectura de información</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Information architecture</span>
+            <span class="process__detail-tag" data-lang="es">Análisis de referencias (benchmark)</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Reference analysis (benchmark)</span>
+            <span class="process__detail-tag" data-lang="es">Visión de experiencia</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Experience vision</span>
+          </div>
+        </div>
+        
+        <div class="process__step">
+          <div class="process__dot"></div>
+          <span class="process__number" data-lang="es">Fase 04</span>
+          <span class="process__number" data-lang="en" style="display: none;">Phase 04</span>
+          <h3 class="process__title" data-lang="es">Diseñar</h3>
+          <h3 class="process__title" data-lang="en" style="display: none;">Design</h3>
+          <p class="process__desc" data-lang="es">Wireframing, prototipo de baja fidelidad, guía UI y prototipo de alta fidelidad.</p>
+          <p class="process__desc" data-lang="en" style="display: none;">Wireframing, low-fidelity prototype, UI guide, and high-fidelity prototype.</p>
+          <div class="process__details">
+            <span class="process__detail-tag" data-lang="es">Wireframing</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Wireframing</span>
+            <span class="process__detail-tag" data-lang="es">Prototipo baja fidelidad</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Low-fidelity prototype</span>
+            <span class="process__detail-tag" data-lang="es">Guía UI</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">UI guide</span>
+            <span class="process__detail-tag" data-lang="es">Prototipo alta fidelidad</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">High-fidelity prototype</span>
+          </div>
+        </div>
+        
+        <div class="process__step">
+          <div class="process__dot"></div>
+          <span class="process__number" data-lang="es">Fase 05</span>
+          <span class="process__number" data-lang="en" style="display: none;">Phase 05</span>
+          <h3 class="process__title" data-lang="es">Testing</h3>
+          <h3 class="process__title" data-lang="en" style="display: none;">Testing</h3>
+          <p class="process__desc" data-lang="es">Pruebas exploratorias de usabilidad y detección de puntos de fricción.</p>
+          <p class="process__desc" data-lang="en" style="display: none;">Exploratory usability tests and detection of friction points.</p>
+          <div class="process__details">
+            <span class="process__detail-tag" data-lang="es">Pruebas exploratorias de usabilidad</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Exploratory usability tests</span>
+            <span class="process__detail-tag" data-lang="es">Detección de puntos de fricción</span>
+            <span class="process__detail-tag" data-lang="en" style="display: none;">Friction point detection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="research section" id="research">
+    <div class="container">
+      <div class="research__content">
+        <span class="section-label" data-lang="es">Investigación</span>
+        <span class="section-label" data-lang="en" style="display: none;">Research</span>
+        
+        <h2 data-lang="es">Necesidades del usuario</h2>
+        <h2 data-lang="en" style="display: none;">User needs</h2>
+        
+        <div class="research__cards">
+          <div class="research__card fade-in">
+            <div class="research__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="research__card-title" data-lang="es">Reducción de costos</h3>
+            <h3 class="research__card-title" data-lang="en" style="display: none;">Cost reduction</h3>
+            <p class="research__card-desc" data-lang="es">Reducir los costos en alquileres de estacionamientos, que son muy caros para pagar más de uno mensual.</p>
+            <p class="research__card-desc" data-lang="en" style="display: none;">Reduce parking rental costs, which are very expensive to pay for more than one monthly.</p>
+          </div>
+          
+          <div class="research__card fade-in">
+            <div class="research__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+            </div>
+            <h3 class="research__card-title" data-lang="es">Búsqueda fácil</h3>
+            <h3 class="research__card-title" data-lang="en" style="display: none;">Easy search</h3>
+            <p class="research__card-desc" data-lang="es">Encontrar fácilmente un lugar para estacionar evitando perder tiempo, combustible y paciencia.</p>
+            <p class="research__card-desc" data-lang="en" style="display: none;">Easily find a place to park, avoiding wasting time, fuel, and patience.</p>
+          </div>
+          
+          <div class="research__card fade-in">
+            <div class="research__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+              </svg>
+            </div>
+            <h3 class="research__card-title" data-lang="es">Plataforma única</h3>
+            <h3 class="research__card-title" data-lang="en" style="display: none;">Unified platform</h3>
+            <p class="research__card-desc" data-lang="es">Una plataforma que reúna a todos los alquileres y ventas de estacionamientos.</p>
+            <p class="research__card-desc" data-lang="en" style="display: none;">A platform that brings together all parking rentals and sales.</p>
+          </div>
+          
+          <div class="research__card fade-in">
+            <div class="research__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="research__card-title" data-lang="es">Gestión simple</h3>
+            <h3 class="research__card-title" data-lang="en" style="display: none;">Simple management</h3>
+            <p class="research__card-desc" data-lang="es">Gestión de reserva de estacionamiento sencilla y rápida con horario específico.</p>
+            <p class="research__card-desc" data-lang="en" style="display: none;">Simple and quick parking reservation management with specific schedule.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="research__visual fade-in-left">
+        <div class="research__persona">
+          <div class="research__persona-header">
+            <div class="research__persona-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="research__persona-name" data-lang="es">Usuario promedio</h4>
+              <h4 class="research__persona-name" data-lang="en" style="display: none;">Average user</h4>
+              <p class="research__persona-role" data-lang="es">Conductor urbano</p>
+              <p class="research__persona-role" data-lang="en" style="display: none;">Urban driver</p>
+            </div>
+          </div>
+          
+          <p class="research__persona-quote" data-lang="es">"Necesito encontrar un lugar seguro para estacionar sin perder todo el día buscando."</p>
+          <p class="research__persona-quote" data-lang="en" style="display: none;">"I need to find a safe place to park without spending all day looking."</p>
+          
+          <div class="research__persona-needs">
+            <h4 data-lang="es">Necesidades clave</h4>
+            <h4 data-lang="en" style="display: none;">Key needs</h4>
+            <ul>
+              <li data-lang="es">Ahorrar dinero en estacionamiento</li>
+              <li data-lang="en" style="display: none;">Save money on parking</li>
+              <li data-lang="es">Encontrar espacio rápido</li>
+              <li data-lang="en" style="display: none;">Find space quickly</li>
+              <li data-lang="es">Reservar con anticipación</li>
+              <li data-lang="en" style="display: none;">Book in advance</li>
+              <li data-lang="es">Gestionar fácilmente</li>
+              <li data-lang="en" style="display: none;">Manage easily</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Section -->
+  <section class="design section" id="design">
+    <div class="container">
+      <span class="section-label" data-lang="es">Diseño final</span>
+      <span class="section-label" data-lang="en" style="display: none;">Final design</span>
+      
+      <h2 data-lang="es">Interfaces de la aplicación</h2>
+      <h2 data-lang="en" style="display: none;">Application interfaces</h2>
+    </div>
+    
+    <div class="design__gallery">
+      <div class="design__track">
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest5.webp" alt="Quest Search Results">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Búsqueda de estacionamientos</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Parking search</h4>
+            <p class="design__caption-desc" data-lang="es">Listado con filtros de horario y ubicación</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">List with time and location filters</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest6.webp" alt="Quest Map View">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Vista de mapa</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Map view</h4>
+            <p class="design__caption-desc" data-lang="es">Mapa interactivo con geolocalización</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Interactive map with geolocation</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest7.webp" alt="Quest Timer">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Timer de compra</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Purchase timer</h4>
+            <p class="design__caption-desc" data-lang="es">Selector circular de duración</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Circular duration selector</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest8.webp" alt="Quest Active Session">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Sesión activa</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Active session</h4>
+            <p class="design__caption-desc" data-lang="es">Gestión y notificaciones</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Management and notifications</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest12.webp" alt="Quest Rentals">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Alquiler de garajes</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Garage rentals</h4>
+            <p class="design__caption-desc" data-lang="es">Marketplace de estacionamientos</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Parking marketplace</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest13.webp" alt="Quest Listing Detail">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Detalle del listing</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Listing detail</h4>
+            <p class="design__caption-desc" data-lang="es">Galería de fotos y detalles</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Photo gallery and details</p>
+          </div>
+        </div>
+        
+        <div class="design__item fade-in">
+          <div class="design__device device-frame">
+            <img src="assets/img/quest14.webp" alt="Quest Filters">
+          </div>
+          <div class="design__caption">
+            <h4 class="design__caption-title" data-lang="es">Filtros avanzados</h4>
+            <h4 class="design__caption-title" data-lang="en" style="display: none;">Advanced filters</h4>
+            <p class="design__caption-desc" data-lang="es">Búsqueda personalizada</p>
+            <p class="design__caption-desc" data-lang="en" style="display: none;">Customized search</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="design__hint" data-lang="es">← Desliza para ver más →</p>
+    <p class="design__hint" data-lang="en" style="display: none;">← Swipe to see more →</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features section" id="features">
+    <div class="container">
+      <span class="section-label" data-lang="es">Features</span>
+      <span class="section-label" data-lang="en" style="display: none;">Features</span>
+      
+      <h2 data-lang="es">Funcionalidades principales</h2>
+      <h2 data-lang="en" style="display: none;">Key features</h2>
+      
+      <div class="features__grid">
+        <div class="features__card fade-in">
+          <div class="features__card-image">
+            <div class="device-frame">
+              <img src="assets/img/quest14.webp" alt="Advanced Filters">
+            </div>
+          </div>
+          <div class="features__card-content">
+            <span class="features__card-label" data-lang="es">Búsqueda</span>
+            <span class="features__card-label" data-lang="en" style="display: none;">Search</span>
+            <h3 class="features__card-title" data-lang="es">Filtros inteligentes</h3>
+            <h3 class="features__card-title" data-lang="en" style="display: none;">Smart filters</h3>
+            <p class="features__card-desc" data-lang="es">Búsqueda personalizada por ubicación, precio, distancia, tamaño y modalidad de alquiler.</p>
+            <p class="features__card-desc" data-lang="en" style="display: none;">Customized search by location, price, distance, size, and rental modality.</p>
+          </div>
+        </div>
+        
+        <div class="features__card fade-in">
+          <div class="features__card-image">
+            <div class="device-frame">
+              <img src="assets/img/quest6.webp" alt="Interactive Map">
+            </div>
+          </div>
+          <div class="features__card-content">
+            <span class="features__card-label" data-lang="es">Mapa</span>
+            <span class="features__card-label" data-lang="en" style="display: none;">Map</span>
+            <h3 class="features__card-title" data-lang="es">Mapa interactivo</h3>
+            <h3 class="features__card-title" data-lang="en" style="display: none;">Interactive map</h3>
+            <p class="features__card-desc" data-lang="es">Geolocalización en tiempo real con detalle del estacionamiento seleccionado.</p>
+            <p class="features__card-desc" data-lang="en" style="display: none;">Real-time geolocation with details of the selected parking lot.</p>
+          </div>
+        </div>
+        
+        <div class="features__card fade-in">
+          <div class="features__card-image">
+            <div class="device-frame">
+              <img src="assets/img/quest7.webp" alt="Purchase Timer">
+            </div>
+          </div>
+          <div class="features__card-content">
+            <span class="features__card-label" data-lang="es">Compra</span>
+            <span class="features__card-label" data-lang="en" style="display: none;">Purchase</span>
+            <h3 class="features__card-title" data-lang="es">Timer circular</h3>
+            <h3 class="features__card-title" data-lang="en" style="display: none;">Circular timer</h3>
+            <p class="features__card-desc" data-lang="es">Selector innovador de duración con pago integrado y notificaciones.</p>
+            <p class="features__card-desc" data-lang="en" style="display: none;">Innovative duration selector with integrated payment and notifications.</p>
+          </div>
+        </div>
+        
+        <div class="features__card fade-in">
+          <div class="features__card-image">
+            <div class="device-frame">
+              <img src="assets/img/quest8.webp" alt="Active Session">
+            </div>
+          </div>
+          <div class="features__card-content">
+            <span class="features__card-label" data-lang="es">Gestión</span>
+            <span class="features__card-label" data-lang="en" style="display: none;">Management</span>
+            <h3 class="features__card-title" data-lang="es">Sesión activa</h3>
+            <h3 class="features__card-title" data-lang="en" style="display: none;">Active session</h3>
+            <p class="features__card-desc" data-lang="es">Control total con extensiones, notificaciones y ubicación del vehículo.</p>
+            <p class="features__card-desc" data-lang="en" style="display: none;">Full control with extensions, notifications, and vehicle location.</p>
+          </div>
+        </div>
+        
+        <div class="features__card fade-in">
+          <div class="features__card-image">
+            <div class="device-frame">
+              <img src="assets/img/quest12.webp" alt="Garage Rentals">
+            </div>
+          </div>
+          <div class="features__card-content">
+            <span class="features__card-label" data-lang="es">Marketplace</span>
+            <span class="features__card-label" data-lang="en" style="display: none;">Marketplace</span>
+            <h3 class="features__card-title" data-lang="es">Alquiler de garajes</h3>
+            <h3 class="features__card-title" data-lang="en" style="display: none;">Garage rentals</h3>
+            <p class="features__card-desc" data-lang="es">Compra y alquiler de espacios con alertas de búsqueda guardadas.</p>
+            <p class="features__card-desc" data-lang="en" style="display: none;">Buy and rent spaces with saved search alerts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learnings Section -->
+  <section class="learnings section" id="learnings">
+    <div class="container">
+      <span class="section-label" data-lang="es">Aprendizajes</span>
+      <span class="section-label" data-lang="en" style="display: none;">Learnings</span>
+      
+      <h2 data-lang="es">Lo que aprendí</h2>
+      <h2 data-lang="en" style="display: none;">What I learned</h2>
+      
+      <div class="learnings__grid">
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Investigación de usuarios</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">User research</h3>
+          <p class="learnings__card-desc" data-lang="es">Aprendí a realizar estudios de usuarios desde cero para entender sus necesidades reales.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I learned to conduct user studies from scratch to understand their real needs.</p>
+        </div>
+        
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Sistema de diseño</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">Design system</h3>
+          <p class="learnings__card-desc" data-lang="es">Creé un sistema de diseño completo para mantener consistencia visual en toda la app.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I created a complete design system to maintain visual consistency throughout the app.</p>
+        </div>
+        
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Desarrollo fullstack</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">Fullstack development</h3>
+          <p class="learnings__card-desc" data-lang="es">Desarrollé tanto el frontend con React Native como el backend con Node.js y Express.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I developed both the frontend with React Native and the backend with Node.js and Express.</p>
+        </div>
+        
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.18A1.5 1.5 0 014 17.035V5.965a1.5 1.5 0 012.036-1.415l5.384 3.18a1.5 1.5 0 010 2.46z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Pruebas de usabilidad</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">Usability testing</h3>
+          <p class="learnings__card-desc" data-lang="es">Realicé pruebas con usuarios reales para validar y mejorar la experiencia.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I conducted tests with real users to validate and improve the experience.</p>
+        </div>
+        
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Integración frontend-backend</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">Frontend-backend integration</h3>
+          <p class="learnings__card-desc" data-lang="es">Aprendí a conectar la interfaz móvil con APIs RESTful para datos en tiempo real.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I learned to connect the mobile interface with RESTful APIs for real-time data.</p>
+        </div>
+        
+        <div class="learnings__card fade-in">
+          <div class="learnings__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+            </svg>
+          </div>
+          <h3 class="learnings__card-title" data-lang="es">Resolución de problemas</h3>
+          <h3 class="learnings__card-title" data-lang="en" style="display: none;">Problem solving</h3>
+          <p class="learnings__card-desc" data-lang="es">Enfrenté desafíos técnicos de UX y desarrollo que fortalecieron mi capacidad de resolución.</p>
+          <p class="learnings__card-desc" data-lang="en" style="display: none;">I faced UX and development technical challenges that strengthened my problem-solving skills.</p>
+        </div>
+      </div>
+      
+      <div class="learnings__quote fade-in">
+        <blockquote data-lang="es">
+          "Este proyecto me enseñó que el diseño no es solo crear interfaces bonitas, sino resolver problemas reales de las personas a través de la tecnología."
+        </blockquote>
+        <blockquote data-lang="en" style="display: none;">
+          "This project taught me that design is not just about creating beautiful interfaces, but about solving real people's problems through technology."
+        </blockquote>
+        <cite data-lang="es">— María Eugenia Máspoli</cite>
+        <cite data-lang="en" style="display: none;">— María Eugenia Máspoli</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta section" id="cta">
+    <div class="container">
+      <h2 data-lang="es">¿Querés ver más proyectos?</h2>
+      <h2 data-lang="en" style="display: none;">Want to see more projects?</h2>
+      
+      <p data-lang="es">Explorá mi portfolio completo para ver otros trabajos de diseño y desarrollo.</p>
+      <p data-lang="en" style="display: none;">Explore my complete portfolio to see other design and development work.</p>
+      
+      <div class="cta__buttons">
+        <a href="https://mariaeugeniamaspolii.netlify.app" class="btn" target="_blank" data-lang="es">Ver portfolio</a>
+        <a href="https://mariaeugeniamaspolii.netlify.app" class="btn" target="_blank" data-lang="en" style="display: none;">View portfolio</a>
+        <a href="https://github.com/mariaeugeniamaspolii/Quest-parking_app.git" class="btn btn--outline" target="_blank" data-lang="es">Ver código</a>
+        <a href="https://github.com/mariaeugeniamaspolii/Quest-parking_app.git" class="btn btn--outline" target="_blank" data-lang="en" style="display: none;">View code</a>
+      </div>
+      
+      <div class="cta__social">
+        <a href="https://www.linkedin.com/in/maria-eugenia-m%C3%A1spoli/" class="cta__social-link" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/mariaeugeniamaspolii" class="cta__social-link" target="_blank" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="mailto:maria.maspoli@outlook.es" class="cta__social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2022 María Eugenia Máspoli · <a href="https://mariaeugeniamaspolii.netlify.app" target="_blank">Portfolio</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

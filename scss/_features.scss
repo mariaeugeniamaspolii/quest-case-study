@@ -1,0 +1,99 @@
+.features {
+  background-color: var(--color-dark);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--space-16);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-to($breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    background: linear-gradient(
+      135deg,
+      var(--color-white-a05) 0%,
+      var(--color-white-a02) 100%
+    );
+    border: var(--border-width) solid var(--color-white-a10);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: var(--transition-medium);
+
+    &:hover {
+      transform: translateY(-10px);
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-card-lg);
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      @include respond-to($breakpoint-lg) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__card-image {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    background-color: var(--color-black-a30);
+
+    @include respond-to($breakpoint-md) {
+      height: 250px;
+    }
+
+    .device-frame {
+      width: 140px;
+
+      @include respond-to($breakpoint-md) {
+        width: 160px;
+      }
+    }
+  }
+
+  &__card-content {
+    padding: var(--space-6);
+
+    @include respond-to($breakpoint-md) {
+      padding: var(--space-8);
+    }
+  }
+
+  &__card-label {
+    font-size: var(--font-size-3xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    margin-bottom: var(--space-2);
+  }
+
+  &__card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+  }
+
+  &__card-desc {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray);
+    line-height: var(--line-height-base);
+  }
+}

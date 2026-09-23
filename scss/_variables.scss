@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  // Typography
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-size-h1: clamp(2.5rem, 6vw, 4.5rem);
+  --font-size-h2: clamp(2rem, 4vw, 3rem);
+  --font-size-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --font-size-body: clamp(1rem, 1.2vw, 1.125rem);
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-lead: clamp(1.125rem, 1.5vw, 1.25rem);
+  --font-size-md: 1rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-xs: 0.875rem;
+  --font-size-2xs: 0.8125rem;
+  --font-size-3xs: 0.75rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.7;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+
+  // Colors — solid
+  --color-primary: #1541B3;
+  --color-primary-rgb: 16 53 147;
+  --color-dark: #00081E;
+  --color-dark-rgb: 0 8 30;
+  --color-light: #F8F8F8;
+  --color-white: #FFFFFF;
+  --color-white-rgb: 255 255 255;
+  --color-black: #000000;
+  --color-black-rgb: 0 0 0;
+  --color-gray: #6B7280;
+  --color-gray-light: #E5E7EB;
+
+  // Colors — alpha (primary)
+  --color-primary-a02: rgb(var(--color-primary-rgb) / 2%);
+  --color-primary-a05: rgb(var(--color-primary-rgb) / 5%);
+  --color-primary-a10: rgb(var(--color-primary-rgb) / 10%);
+  --color-primary-a15: rgb(var(--color-primary-rgb) / 15%);
+  --color-primary-a20: rgb(var(--color-primary-rgb) / 20%);
+  --color-primary-a30: rgb(var(--color-primary-rgb) / 30%);
+  --color-primary-a40: rgb(var(--color-primary-rgb) / 40%);
+
+  // Colors — alpha (white)
+  --color-white-a02: rgb(var(--color-white-rgb) / 2%);
+  --color-white-a03: rgb(var(--color-white-rgb) / 3%);
+  --color-white-a05: rgb(var(--color-white-rgb) / 5%);
+  --color-white-a10: rgb(var(--color-white-rgb) / 10%);
+
+  // Colors — alpha (black)
+  --color-black-a05: rgb(var(--color-black-rgb) / 5%);
+  --color-black-a30: rgb(var(--color-black-rgb) / 30%);
+  --color-black-a40: rgb(var(--color-black-rgb) / 40%);
+  --color-black-a50: rgb(var(--color-black-rgb) / 50%);
+
+  // Colors — alpha (dark)
+  --color-dark-a90: rgb(var(--color-dark-rgb) / 90%);
+
+  // Shadows
+  --shadow-btn: 0 10px 30px var(--color-primary-a30);
+  --shadow-card: 0 10px 30px var(--color-black-a05);
+  --shadow-card-hover: 0 20px 40px var(--color-black-a30);
+  --shadow-card-lg: 0 30px 60px var(--color-black-a40);
+  --shadow-device:
+    0 25px 50px -12px var(--color-black-a50),
+    inset 0 0 0 2px var(--color-white-a10);
+
+  // Radii
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 50px;
+  --radius-device: 40px;
+  --radius-device-img: 30px;
+  --radius-full: 50%;
+
+  // Spacing
+  --section-padding: clamp(60px, 10vw, 120px);
+  --container-max: 1200px;
+  --container-padding: clamp(20px, 5vw, 40px);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  // Borders
+  --border-width: 1px;
+  --border-width-btn: 2px;
+
+  // Effects
+  --blur-nav: 10px;
+  --blur-glow: 40px;
+  --blur-glow-lg: 60px;
+  --z-nav: 100;
+  --z-lang: 1000;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.6s ease;
+}
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@mixin section-padding {
+  padding: var(--section-padding) 0;
+}

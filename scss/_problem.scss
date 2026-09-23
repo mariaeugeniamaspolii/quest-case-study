@@ -1,0 +1,83 @@
+.problem {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+
+  .section-label {
+    color: var(--color-primary);
+  }
+
+  h2 {
+    color: var(--color-dark);
+    text-align: left;
+  }
+
+  .container {
+    display: block;
+  }
+
+  &__content {
+    z-index: 1;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to($breakpoint-lg) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding: var(--space-4);
+    background-color: var(--color-light);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-medium);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-white);
+    }
+  }
+
+  &__text {
+    h3 {
+      color: var(--color-dark);
+      font-size: var(--font-size-md);
+      margin-bottom: var(--space-2);
+    }
+
+    p {
+      color: var(--color-gray);
+      font-size: var(--font-size-xs);
+      line-height: var(--line-height-base);
+    }
+  }
+}

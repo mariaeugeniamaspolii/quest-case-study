@@ -1,0 +1,120 @@
+.design {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  overflow: hidden;
+
+  .section-label {
+    color: var(--color-primary);
+  }
+
+  h2 {
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  &__gallery {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    padding: var(--space-8) 0;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include respond-to($breakpoint-lg) {
+      padding: var(--space-12) 0;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: var(--space-6);
+    padding: 0 var(--container-padding);
+
+    @include respond-to($breakpoint-md) {
+      gap: var(--space-8);
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: 240px;
+    transition: var(--transition-medium);
+
+    @include respond-to($breakpoint-md) {
+      width: 280px;
+    }
+
+    @include respond-to($breakpoint-lg) {
+      width: 300px;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__device {
+    margin-bottom: var(--space-4);
+  }
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__caption-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-dark);
+    margin-bottom: var(--space-1);
+  }
+
+  &__caption-desc {
+    font-size: var(--font-size-2xs);
+    color: var(--color-gray);
+  }
+
+  // Mobile Grid
+  @include respond-to($breakpoint-sm) {
+    &__track {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  // Desktop Scroll
+  @include respond-to($breakpoint-lg) {
+    &__track {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding-left: calc(var(--container-padding) + 50px);
+      padding-right: calc(var(--container-padding) + 50px);
+    }
+
+    &__item {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__hint {
+    text-align: center;
+    margin-top: var(--space-6);
+    font-size: var(--font-size-xs);
+    color: var(--color-gray);
+
+    @include respond-to($breakpoint-lg) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@import 'variables';
+
+// Reset
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  line-height: var(--line-height-base);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+// Typography
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-6);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-4);
+}
+
+p {
+  font-size: var(--font-size-body);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+// Container
+.container {
+  @include container;
+}
+
+// Section
+.section {
+  @include section-padding;
+  position: relative;
+}
+
+// Button
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  transition: var(--transition-medium);
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn);
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: var(--border-width-btn) solid var(--color-white);
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-dark);
+    }
+  }
+}
+
+// Tags
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.tag {
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width) solid var(--color-gray);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  transition: var(--transition-fast);
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+// Section Label
+.section-label {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  margin-bottom: var(--space-4);
+}
+
+// Fade In Animation Classes
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Language Toggle
+.lang-toggle {
+  position: fixed;
+  top: var(--space-5);
+  right: var(--space-5);
+  z-index: var(--z-lang);
+  display: flex;
+  gap: var(--space-2);
+
+  button {
+    padding: var(--space-2) var(--space-4);
+    border: var(--border-width) solid var(--color-gray);
+    border-radius: var(--radius-xl);
+    background: transparent;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    transition: var(--transition-fast);
+
+    &:hover,
+    &.active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
+}
+
+// Navigation
+.nav {
+  position: fixed;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-nav);
+  background-color: var(--color-dark-a90);
+  backdrop-filter: blur(var(--blur-nav));
+  border-radius: var(--radius-pill);
+  padding: var(--space-3) var(--space-6);
+  display: flex;
+  gap: var(--space-8);
+
+  a {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray);
+    transition: var(--transition-fast);
+
+    &:hover,
+    &.active {
+      color: var(--color-white);
+    }
+  }
+
+  @include respond-to($breakpoint-md) {
+    gap: var(--space-12);
+    padding: var(--space-4) var(--space-8);
+  }
+}
+
+// Responsive
+@include respond-to($breakpoint-md) {
+  html {
+    font-size: 16px;
+  }
+}
