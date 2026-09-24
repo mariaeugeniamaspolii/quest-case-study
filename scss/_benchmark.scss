@@ -1,0 +1,60 @@
+.benchmark {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+
+  .section-label {
+    color: var(--color-primary);
+  }
+
+  h2 {
+    color: var(--color-dark);
+    text-align: left;
+    margin-bottom: var(--space-12);
+  }
+
+  &__app {
+    margin-bottom: var(--space-12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__app-name {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: var(--border-width) solid var(--color-gray-light);
+  }
+
+  &__insights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+
+    @include respond-to($breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__insight {
+    background-color: var(--color-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    border-left: 3px solid var(--color-primary);
+    transition: var(--transition-medium);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+  }
+
+  &__insight-text {
+    font-size: var(--font-size-2xs);
+    color: var(--color-gray);
+    line-height: var(--line-height-base);
+  }
+}

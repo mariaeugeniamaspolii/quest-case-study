@@ -1,0 +1,116 @@
+.empathy {
+  background-color: var(--color-dark);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+
+    @include respond-to($breakpoint-lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__persona {
+    background: linear-gradient(
+      135deg,
+      var(--color-white-a05) 0%,
+      var(--color-white-a02) 100%
+    );
+    border: var(--border-width) solid var(--color-white-a10);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    transition: var(--transition-medium);
+
+    &:hover {
+      border-color: var(--color-primary-a40);
+      box-shadow: var(--shadow-card-hover);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: var(--border-width) solid var(--color-white-a10);
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-white);
+    }
+  }
+
+  &__name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+  }
+
+  &__quadrants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+
+    @include respond-to($breakpoint-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__quad {
+    background-color: var(--color-white-a03);
+    border: var(--border-width) solid var(--color-white-a10);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+  }
+
+  &__quad-label {
+    display: inline-block;
+    font-size: var(--font-size-3xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-pill);
+    padding: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
+  &__quad-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
+    li {
+      font-size: var(--font-size-2xs);
+      color: var(--color-gray);
+      line-height: var(--line-height-base);
+      position: relative;
+      padding-left: var(--space-4);
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+      }
+    }
+  }
+}

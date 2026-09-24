@@ -1,0 +1,30 @@
+// Navigation
+.nav {
+  position: fixed;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-nav);
+  background-color: var(--color-dark-a90);
+  backdrop-filter: blur(var(--blur-nav));
+  border-radius: var(--radius-pill);
+  padding: var(--space-3) var(--space-6);
+  display: flex;
+  gap: var(--space-8);
+
+  a {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray);
+    transition: var(--transition-fast);
+
+    &:hover,
+    &.active {
+      color: var(--color-white);
+    }
+  }
+
+  @include respond-to($breakpoint-md) {
+    gap: var(--space-12);
+    padding: var(--space-4) var(--space-8);
+  }
+}

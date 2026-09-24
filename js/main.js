@@ -241,6 +241,15 @@ const activeNav = {
   }
 };
 
+// Footer Year
+const footerYear = {
+  init() {
+    document.querySelectorAll('.js-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  }
+};
+
 // Initialize Everything
 document.addEventListener('DOMContentLoaded', () => {
   langToggle.init();
@@ -250,4 +259,5 @@ document.addEventListener('DOMContentLoaded', () => {
   galleryScroll.init();
   smoothScroll.init();
   activeNav.init();
+  footerYear.init();
 });
