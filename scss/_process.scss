@@ -93,13 +93,16 @@
 
     @include respond-to($breakpoint-md) {
       left: auto;
+      right: auto;
 
-      &:nth-child(odd) {
+      .process__step:nth-child(odd) & {
         right: -9px;
+        left: auto;
       }
 
-      &:nth-child(even) {
+      .process__step:nth-child(even) & {
         left: -9px;
+        right: auto;
       }
     }
 
@@ -125,32 +128,45 @@
     margin-bottom: var(--space-3);
   }
 
-  &__desc {
-    font-size: var(--font-size-sm);
-    color: var(--color-gray);
-    line-height: var(--line-height-base);
-  }
-
-  &__details {
-    margin-top: var(--space-4);
+  &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--space-2);
+    text-align: left;
 
-    @include respond-to($breakpoint-md) {
-      justify-content: flex-end;
+    li {
+      position: relative;
+      padding-left: var(--space-5);
+      font-size: var(--font-size-sm);
+      color: var(--color-gray);
+      line-height: var(--line-height-base);
 
-      .process__step:nth-child(even) & {
-        justify-content: flex-start;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 6px;
+        height: 6px;
+        border-radius: var(--radius-full);
+        background-color: var(--color-primary);
       }
     }
-  }
 
-  &__detail-tag {
-    padding: var(--space-1) var(--space-3);
-    background-color: var(--color-primary-a10);
-    border-radius: var(--radius-xl);
-    font-size: var(--font-size-3xs);
-    color: var(--color-primary);
+    @include respond-to($breakpoint-md) {
+      .process__step:nth-child(odd) & {
+        text-align: right;
+
+        li {
+          padding-right: var(--space-5);
+          padding-left: 0;
+
+          &::before {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
   }
 }
