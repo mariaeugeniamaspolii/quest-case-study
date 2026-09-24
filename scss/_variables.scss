@@ -42,6 +42,13 @@
   --color-black-rgb: 0 0 0;
   --color-gray: #6B7280;
   --color-gray-light: #E5E7EB;
+  --color-danger: #DC2626;
+  --color-danger-rgb: 220 38 38;
+  --color-success: #22C55E;
+  --color-warning: #FBBF24;
+  --color-purple: #7C3AED;
+  --color-purple-light: #C4B5FD;
+  --color-red-light: #FCA5A5;
 
   // Colors — alpha (primary)
   --color-primary-a02: rgb(var(--color-primary-rgb) / 2%);
@@ -57,6 +64,7 @@
   --color-white-a03: rgb(var(--color-white-rgb) / 3%);
   --color-white-a05: rgb(var(--color-white-rgb) / 5%);
   --color-white-a10: rgb(var(--color-white-rgb) / 10%);
+  --color-white-a20: rgb(var(--color-white-rgb) / 20%);
 
   // Colors — alpha (black)
   --color-black-a05: rgb(var(--color-black-rgb) / 5%);
@@ -66,6 +74,9 @@
 
   // Colors — alpha (dark)
   --color-dark-a90: rgb(var(--color-dark-rgb) / 90%);
+
+  // Colors — alpha (danger)
+  --color-danger-a12: rgb(var(--color-danger-rgb) / 12%);
 
   // Shadows
   --shadow-btn: 0 10px 30px var(--color-primary-a30);
