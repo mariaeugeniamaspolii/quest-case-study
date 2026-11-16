@@ -42,12 +42,11 @@
   &__insight {
     background-color: var(--color-light);
     border-radius: var(--radius-md);
-    padding: var(--space-5);
     border-left: 3px solid var(--color-primary);
     transition: var(--transition-medium);
     display: flex;
-    align-items: center;
-    gap: var(--space-4);
+    align-items: stretch;
+    overflow: hidden;
 
     &:hover {
       transform: translateY(-3px);
@@ -57,13 +56,17 @@
 
   &__insight-img {
     flex: 0 0 auto;
-    width: 80px;
+    width: 40%;
+    min-width: 12.5rem;
     height: auto;
-    border-radius: var(--radius-md);
-    border: var(--border-width) solid var(--color-gray-light);
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   &__insight-text {
+    flex: 1 1 auto;
+    padding: var(--space-5);
     font-size: var(--font-size-2xs);
     color: var(--color-gray);
     line-height: var(--line-height-base);
