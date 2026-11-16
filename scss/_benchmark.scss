@@ -45,11 +45,22 @@
     padding: var(--space-5);
     border-left: 3px solid var(--color-primary);
     transition: var(--transition-medium);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
 
     &:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-card);
     }
+  }
+
+  &__insight-img {
+    flex: 0 0 auto;
+    width: 80px;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: var(--border-width) solid var(--color-gray-light);
   }
 
   &__insight-text {
