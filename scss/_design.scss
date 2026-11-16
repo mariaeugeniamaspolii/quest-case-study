@@ -31,7 +31,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: var(--space-4);
+    gap: var(--space-10);
     padding: var(--space-5);
     border-radius: var(--radius-lg);
     overflow-x: auto;
@@ -42,8 +42,12 @@
     }
   }
 
-  &__shot {
+  &__shot-wrap {
+    position: relative;
     flex: 0 0 auto;
+  }
+
+  &__shot {
     display: block;
     width: 160px;
     height: auto;
@@ -51,15 +55,20 @@
   }
 
   &__arrow {
-    flex: 0 0 auto;
-    align-self: center;
-    display: flex;
-    margin-inline: calc(var(--space-4) / -2);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--space-10);
+    height: 12px;
     color: var(--color-dark);
+    pointer-events: none;
+    overflow: visible;
 
-    svg {
-      width: 24px;
-      height: 24px;
+    &--stepped {
+      top: 0;
+      transform: none;
+      height: 100%;
     }
   }
 }
