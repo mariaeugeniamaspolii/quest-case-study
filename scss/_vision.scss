@@ -26,23 +26,16 @@
     grid-column: 1 / -1;
     background: linear-gradient(
       135deg,
-      var(--color-primary-a30) 0%,
-      var(--color-primary-a10) 100%
+      var(--color-white-a05) 0%,
+      var(--color-white-a02) 100%
     );
     border: var(--border-width) solid var(--color-primary-a40);
     border-radius: var(--radius-xl);
     padding: var(--space-6) var(--space-10);
   }
 
-  &__center-title {
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-white);
-    margin-bottom: var(--space-2);
-  }
-
   &__center-sub {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-h1);
     color: var(--color-gray);
   }
 
