@@ -49,4 +49,17 @@
     height: auto;
     border-radius: var(--radius-md);
   }
+
+  &__arrow {
+    flex: 0 0 auto;
+    align-self: center;
+    display: flex;
+    margin-inline: calc(var(--space-4) / -2);
+    color: var(--color-dark);
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
