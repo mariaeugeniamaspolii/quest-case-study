@@ -13,8 +13,7 @@
 <body>
   <!-- Language Toggle -->
   <div class="lang-toggle">
-    <button class="lang-btn active" data-lang="es">ES</button>
-    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn active" data-lang-btn data-state="es">EN</button>
   </div>
 
   <!-- Navigation -->
@@ -98,10 +97,7 @@
         <div class="problem__items">
           <div class="problem__item fade-in">
             <div class="problem__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
+              <i data-lucide="map-pin" aria-hidden="true"></i>
             </div>
             <div class="problem__text">
               <h3 data-lang="es">Dificultad para encontrar estacionamiento</h3>
@@ -113,9 +109,7 @@
           
           <div class="problem__item fade-in">
             <div class="problem__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-              </svg>
+              <i data-lucide="car" aria-hidden="true"></i>
             </div>
             <div class="problem__text">
               <h3 data-lang="es">Sobrepoblación de vehículos</h3>
@@ -127,9 +121,7 @@
           
           <div class="problem__item fade-in">
             <div class="problem__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <i data-lucide="circle-dollar-sign" aria-hidden="true"></i>
             </div>
             <div class="problem__text">
               <h3 data-lang="es">Tarifas elevadas</h3>
@@ -141,9 +133,7 @@
           
           <div class="problem__item fade-in">
             <div class="problem__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-              </svg>
+              <i data-lucide="layout-grid" aria-hidden="true"></i>
             </div>
             <div class="problem__text">
               <h3 data-lang="es">Publicaciones dispersas</h3>
@@ -170,9 +160,7 @@
         <div class="solution__items">
           <div class="solution__item fade-in">
             <div class="solution__item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
-              </svg>
+              <i data-lucide="store" aria-hidden="true"></i>
             </div>
             <div class="solution__item-content">
               <h3 class="solution__item-title" data-lang="es">Plataforma única</h3>
@@ -184,9 +172,7 @@
           
           <div class="solution__item fade-in">
             <div class="solution__item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-              </svg>
+              <i data-lucide="users-round" aria-hidden="true"></i>
             </div>
             <div class="solution__item-content">
               <h3 class="solution__item-title" data-lang="es">Red de estacionamientos</h3>
@@ -198,9 +184,7 @@
           
           <div class="solution__item fade-in">
             <div class="solution__item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
-              </svg>
+              <i data-lucide="ticket" aria-hidden="true"></i>
             </div>
             <div class="solution__item-content">
               <h3 class="solution__item-title" data-lang="es">Sistema de suscripción</h3>
@@ -212,9 +196,7 @@
           
           <div class="solution__item fade-in">
             <div class="solution__item-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-              </svg>
+              <i data-lucide="zap" aria-hidden="true"></i>
             </div>
             <div class="solution__item-content">
               <h3 class="solution__item-title" data-lang="es">Gestión rápida y simple</h3>
@@ -350,7 +332,7 @@
       <div class="audience__grid">
         <div class="audience__card fade-in">
           <div class="audience__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+            <i data-lucide="car" aria-hidden="true"></i>
           </div>
           <h3 class="audience__card-title" data-lang="es">Conductores urbanos</h3>
           <h3 class="audience__card-title" data-lang="en" style="display: none;">Urban drivers</h3>
@@ -359,7 +341,7 @@
         </div>
         <div class="audience__card fade-in">
           <div class="audience__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.875M3 10.875V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-7.125"/></svg>
+            <i data-lucide="landmark" aria-hidden="true"></i>
           </div>
           <h3 class="audience__card-title" data-lang="es">Dueños de estacionamientos</h3>
           <h3 class="audience__card-title" data-lang="en" style="display: none;">Parking owners</h3>
@@ -368,7 +350,7 @@
         </div>
         <div class="audience__card fade-in">
           <div class="audience__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            <i data-lucide="calendar" aria-hidden="true"></i>
           </div>
           <h3 class="audience__card-title" data-lang="es">Conductores frecuentes</h3>
           <h3 class="audience__card-title" data-lang="en" style="display: none;">Frequent drivers</h3>
@@ -377,7 +359,7 @@
         </div>
         <div class="audience__card fade-in">
           <div class="audience__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <i data-lucide="map-pin" aria-hidden="true"></i>
           </div>
           <h3 class="audience__card-title" data-lang="es">Conductores ocasionales</h3>
           <h3 class="audience__card-title" data-lang="en" style="display: none;">Occasional drivers</h3>
@@ -393,110 +375,112 @@
     <div class="container">
       <span class="section-label" data-lang="es">Perfiles</span>
       <span class="section-label" data-lang="en" style="display: none;">Profiles</span>
-      <h2 data-lang="es">Perfiles de usuario</h2>
+      <h2 data-lang="es">Perfiles de usuarios</h2>
       <h2 data-lang="en" style="display: none;">User profiles</h2>
       <div class="profiles__grid">
         <div class="profiles__card fade-in">
           <div class="profiles__avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            <img src="assets/img/user1.jpg" alt="Nicolás">
+            <span class="profiles__badge"><i data-lucide="car" aria-hidden="true"></i></span>
           </div>
           <h3 class="profiles__name">Nicolás</h3>
           <span class="profiles__block-label" data-lang="es">Frustraciones</span>
           <span class="profiles__block-label" data-lang="en" style="display: none;">Frustrations</span>
           <ul class="profiles__list">
-            <li data-lang="es">Da vueltas buscando estacionamiento y pierde tiempo</li>
-            <li data-lang="en" style="display: none;">Circles around looking for parking and wastes time</li>
-            <li data-lang="es">Las apps existentes no unifican venta y alquiler</li>
-            <li data-lang="en" style="display: none;">Existing apps do not unify sales and rentals</li>
-            <li data-lang="es">Tarifas altas y poco transparentes</li>
-            <li data-lang="en" style="display: none;">High and non-transparent fees</li>
+            <li data-lang="es">Tiene auto pero no <strong>tiene garaje propio</strong>, y vive en una <strong>zona super urbanizada</strong></li>
+            <li data-lang="en" style="display: none;">Has a car but <strong>has no garage of his own</strong>, and lives in a <strong>very urbanized area</strong></li>
+            <li data-lang="es">Paga una <strong>cuota mensual</strong> de 3500 pesos en el garaje de Tito para dejar el auto ahí solo en las noches</li>
+            <li data-lang="en" style="display: none;">Pays a <strong>monthly fee</strong> of 3500 pesos at Tito's garage to leave the car there only at night</li>
+            <li data-lang="es">Va al trabajo en transporte público porque no puede <strong>costear 2 garajes</strong></li>
+            <li data-lang="en" style="display: none;">Goes to work by public transport because he cannot <strong>afford 2 garages</strong></li>
           </ul>
           <div class="profiles__solution">
-            <span class="profiles__block-label" data-lang="es">Solución Quest</span>
-            <span class="profiles__block-label" data-lang="en" style="display: none;">Quest solution</span>
+          <span class="profiles__block-label" data-lang="es">Solución</span>
+          <span class="profiles__block-label" data-lang="en" style="display: none;">Solution</span>
             <ul class="profiles__list">
-              <li data-lang="es">Mapa en tiempo real con espacios disponibles</li>
-              <li data-lang="en" style="display: none;">Real-time map with available spots</li>
-              <li data-lang="es">Reserva y pago en segundos desde el celular</li>
-              <li data-lang="en" style="display: none;">Book and pay in seconds from the phone</li>
+              <li data-lang="es">Paga <strong>suscripción mensual</strong> en la app y puede acceder a <strong>dos garajes</strong> vinculados en la app</li>
+              <li data-lang="en" style="display: none;">Pays a <strong>monthly subscription</strong> in the app and can access <strong>two garages</strong> linked in the app</li>
+              <li data-lang="es">Fija las horas en las que usará dichos estacionamientos para que el <strong>coste</strong> sea menor</li>
+              <li data-lang="en" style="display: none;">Sets the hours he will use those parking spots so the <strong>cost</strong> is lower</li>
             </ul>
           </div>
         </div>
         <div class="profiles__card fade-in">
           <div class="profiles__avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            <img src="assets/img/user2.jpg" alt="Martina">
+            <span class="profiles__badge"><i data-lucide="car" aria-hidden="true"></i></span>
           </div>
           <h3 class="profiles__name">Martina</h3>
           <span class="profiles__block-label" data-lang="es">Frustraciones</span>
           <span class="profiles__block-label" data-lang="en" style="display: none;">Frustrations</span>
           <ul class="profiles__list">
-            <li data-lang="es">Paga varios alquileres de cochera al mes</li>
-            <li data-lang="en" style="display: none;">Pays for several garage rentals per month</li>
-            <li data-lang="es">Gestionar cada espacio es lento y manual</li>
-            <li data-lang="en" style="display: none;">Managing each spot is slow and manual</li>
-            <li data-lang="es">Cuesta encontrar espacios cerca del trabajo</li>
-            <li data-lang="en" style="display: none;">Hard to find spots near work</li>
+            <li data-lang="es">Va a hacer trámites a una zona que concurre regularmente</li>
+            <li data-lang="en" style="display: none;">Runs errands in an area she regularly visits</li>
+            <li data-lang="es">Los trámites la realiza de forma <strong>esporádica</strong> por lo cual no tiene un horario fijo</li>
+            <li data-lang="en" style="display: none;">She runs these errands <strong>occasionally</strong>, so she does not have a fixed schedule</li>
+            <li data-lang="es">Necesita estacionar un par de minutos pero siempre está todo ocupado</li>
+            <li data-lang="en" style="display: none;">Needs to park for a couple of minutes but everything is always occupied</li>
           </ul>
           <div class="profiles__solution">
-            <span class="profiles__block-label" data-lang="es">Solución Quest</span>
-            <span class="profiles__block-label" data-lang="en" style="display: none;">Quest solution</span>
+          <span class="profiles__block-label" data-lang="es">Solución</span>
+          <span class="profiles__block-label" data-lang="en" style="display: none;">Solution</span>
             <ul class="profiles__list">
-              <li data-lang="es">Planes de suscripción para múltiples espacios</li>
-              <li class="data-lang-en" data-lang="en" style="display: none;">Subscription plans for multiple spots</li>
-              <li data-lang="es">Panel único para gestionar todas las reservas</li>
-              <li data-lang="en" style="display: none;">Single dashboard to manage all bookings</li>
+              <li data-lang="es">Paga una <strong>suscripción</strong> que le da acceso por <strong>horas</strong> a todos los estacionamientos adheridos a la red</li>
+              <li data-lang="en" style="display: none;">Pays for a <strong>subscription</strong> that gives her access by the <strong>hour</strong> to all parking spots on the network</li>
+              <li data-lang="es">Consulta por <strong>cupos libres</strong> cerca de donde necesita, o paga tarifado</li>
+              <li data-lang="en" style="display: none;">Checks for <strong>free spots</strong> near where she needs, or pays the standard rate</li>
             </ul>
           </div>
         </div>
         <div class="profiles__card fade-in">
           <div class="profiles__avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            <img src="assets/img/user3.jpg" alt="Beto">
+            <span class="profiles__badge"><i data-lucide="warehouse" aria-hidden="true"></i></span>
           </div>
           <h3 class="profiles__name">Beto</h3>
           <span class="profiles__block-label" data-lang="es">Frustraciones</span>
           <span class="profiles__block-label" data-lang="en" style="display: none;">Frustrations</span>
           <ul class="profiles__list">
-            <li data-lang="es">Tiene cocheras ociosas sin monetizar</li>
-            <li data-lang="en" style="display: none;">Has idle garages without monetizing them</li>
-            <li data-lang="es">Publicar y cobrar manualmente es complicado</li>
-            <li data-lang="en" style="display: none;">Listing and collecting manually is complicated</li>
-            <li data-lang="es">No tiene visibilidad de demanda real</li>
-            <li data-lang="en" style="display: none;">No visibility into real demand</li>
+            <li data-lang="es">Tiene un negocio de estacionamiento de 20 cupos</li>
+            <li data-lang="en" style="display: none;">Has a 20-spot parking business</li>
+            <li data-lang="es">No tiene un cartel muy visible perdiendo posibles clientes</li>
+            <li data-lang="en" style="display: none;">Does not have a very visible sign, losing potential customers</li>
+            <li data-lang="es">A veces tiene varios cupos <strong>disponibles</strong>, y otras veces está <strong>lleno</strong> pero no se sabe en qué momento se desocupan</li>
+            <li data-lang="en" style="display: none;">Sometimes has several spots <strong>available</strong>, and other times it is <strong>full</strong> but you cannot know when spots will free up</li>
           </ul>
           <div class="profiles__solution">
-            <span class="profiles__block-label" data-lang="es">Solución Quest</span>
-            <span class="profiles__block-label" data-lang="en" style="display: none;">Quest solution</span>
+          <span class="profiles__block-label" data-lang="es">Solución</span>
+          <span class="profiles__block-label" data-lang="en" style="display: none;">Solution</span>
             <ul class="profiles__list">
-              <li data-lang="es">Publicación de espacios en venta o alquiler</li>
-              <li data-lang="en" style="display: none;">List spots for sale or rent</li>
-              <li data-lang="es">Cobro de tarifas centralizado y automático</li>
-              <li data-lang="en" style="display: none;">Centralized, automatic fee collection</li>
+              <li data-lang="es"><strong>Publica</strong> sus cupos en la app y lleva un mejor control de ocupación/disponibilidad</li>
+              <li data-lang="en" style="display: none;"><strong>Lists</strong> his spots in the app and keeps better control of occupancy/availability</li>
+              <li data-lang="es">También ahora gracias a la app es visible para posibles clientes que a su vez vean la <strong>clasificación</strong> y <strong>precio</strong> de su estacionamiento</li>
+              <li data-lang="en" style="display: none;">Thanks to the app he is now visible to potential customers who can also see the <strong>rating</strong> and <strong>price</strong> of his parking</li>
             </ul>
           </div>
         </div>
         <div class="profiles__card fade-in">
           <div class="profiles__avatar">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            <img src="assets/img/user4.jpg" alt="Ana">
+            <span class="profiles__badge"><i data-lucide="warehouse" aria-hidden="true"></i></span>
           </div>
           <h3 class="profiles__name">Ana</h3>
           <span class="profiles__block-label" data-lang="es">Frustraciones</span>
           <span class="profiles__block-label" data-lang="en" style="display: none;">Frustrations</span>
           <ul class="profiles__list">
-            <li data-lang="es">Busca espacio puntual para eventos o citas</li>
-            <li data-lang="en" style="display: none;">Looks for occasional spots for events or appointments</li>
-            <li data-lang="es">No quiere suscripciones ni compromisos largos</li>
-            <li data-lang="en" style="display: none;">Does not want subscriptions or long commitments</li>
-            <li data-lang="es">Temor a llegar y no tener lugar</li>
-            <li data-lang="en" style="display: none;">Fear of arriving with no spot available</li>
+            <li data-lang="es">Se acaba de mudar a un apartamento que viene con garaje incluido pero no tiene auto y le gustaría reducir el <strong>costo de alquiler</strong></li>
+            <li data-lang="en" style="display: none;">Just moved into an apartment that includes a garage but has no car and would like to reduce the <strong>rental cost</strong></li>
+            <li data-lang="es"><strong>Publica</strong> el garaje en varios lugares pero resulta incómodo verificar en cada una de las <strong>plataformas</strong></li>
+            <li data-lang="en" style="display: none;"><strong>Lists</strong> the garage in several places but it is uncomfortable to check <strong>each of the platforms</strong></li>
           </ul>
           <div class="profiles__solution">
-            <span class="profiles__block-label" data-lang="es">Solución Quest</span>
-            <span class="profiles__block-label" data-lang="en" style="display: none;">Quest solution</span>
+          <span class="profiles__block-label" data-lang="es">Solución</span>
+          <span class="profiles__block-label" data-lang="en" style="display: none;">Solution</span>
             <ul class="profiles__list">
-              <li data-lang="es">Reserva por tiempo limitado sin suscripción</li>
-              <li data-lang="en" style="display: none;">Time-limited booking without subscription</li>
-              <li data-lang="es">Confirmación inmediata y espacio garantizado</li>
-              <li data-lang="en" style="display: none;">Instant confirmation and guaranteed spot</li>
+              <li data-lang="es"><strong>Publica una única</strong> vez mediante la app, donde todos los garajes se publican</li>
+              <li data-lang="en" style="display: none;"><strong>Lists it once</strong> through the app, where all garages get published</li>
+              <li data-lang="es">Controla las <strong>reservas</strong> por ahí y recibe el <strong>pago automático</strong> del mismo para descontar de su alquiler</li>
+              <li data-lang="en" style="display: none;"><strong>Controls bookings</strong> from there and receives the <strong>automatic payment</strong> to deduct from her rent</li>
             </ul>
           </div>
         </div>
@@ -515,7 +499,8 @@
         <div class="empathy__persona fade-in">
           <div class="empathy__header">
             <div class="empathy__avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              <img src="assets/img/user1.jpg" alt="Nicolás">
+              <span class="empathy__badge"><i data-lucide="car" aria-hidden="true"></i></span>
             </div>
             <h3 class="empathy__name">Nicolás</h3>
           </div>
@@ -524,40 +509,46 @@
               <span class="empathy__quad-label" data-lang="es">Dice</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Says</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Necesito estacionar sin dar vueltas"</li>
-                <li data-lang="en" style="display: none;">"I need to park without circling around"</li>
-                <li data-lang="es">"Que sea rápido y seguro"</li>
-                <li data-lang="en" style="display: none;">"It should be fast and safe"</li>
+                <li data-lang="es">¿Costará mucho más de lo que ya pago?</li>
+                <li data-lang="en" style="display: none;">Will it cost much more than what I already pay?</li>
+                <li data-lang="es">Tito, adherite a la red de estacionamientos para alquilarlo en doble horario, a mí y a otra persona más</li>
+                <li data-lang="en" style="display: none;">Tito, join the parking network so it can be rented in double shifts, to me and one more person</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Hace</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Does</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Compara precios entre apps</li>
-                <li data-lang="en" style="display: none;">Compares prices across apps</li>
-                <li data-lang="es">Llega antes para asegurar lugar</li>
-                <li data-lang="en" style="display: none;">Arrives early to secure a spot</li>
+                <li data-lang="es">Comprueba cómo funciona la app</li>
+                <li data-lang="en" style="display: none;">Checks how the app works</li>
+                <li data-lang="es">Busca el plan de suscripción que le sirva</li>
+                <li data-lang="en" style="display: none;">Looks for the subscription plan that suits him</li>
+                <li data-lang="es">Alquila el garaje de Tito en menos horas y un garaje cerca de su trabajo</li>
+                <li data-lang="en" style="display: none;">Rents Tito's garage for fewer hours and a garage near his work</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Piensa</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Thinks</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Alguien debería unificar todo"</li>
-                <li data-lang="en" style="display: none;">"Someone should unify everything"</li>
-                <li data-lang="es">"El tiempo perdido es dinero"</li>
-                <li data-lang="en" style="display: none;">"Time wasted is money"</li>
+                <li data-lang="es">Al fin podrá usar el auto para ir al trabajo</li>
+                <li data-lang="en" style="display: none;">I will finally be able to use the car to go to work</li>
+                <li data-lang="es">No más pérdida de tiempo y dinero en transporte público</li>
+                <li data-lang="en" style="display: none;">No more wasted time and money on public transport</li>
+                <li data-lang="es">Podré llevar cosas al trabajo que antes no</li>
+                <li data-lang="en" style="display: none;">I will be able to bring things to work that I could not before</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Siente</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Feels</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Frustración al no encontrar lugar</li>
-                <li data-lang="en" style="display: none;">Frustration when no spot is found</li>
-                <li data-lang="es">Alivio al reservar con éxito</li>
-                <li data-lang="en" style="display: none;">Relief when a booking succeeds</li>
+                <li data-lang="es">Aliviado de encontrar solución</li>
+                <li data-lang="en" style="display: none;">Relieved to have found a solution</li>
+                <li data-lang="es">Dudoso, las otras apps no le funcionaron</li>
+                <li data-lang="en" style="display: none;">Doubtful, the other apps never worked out</li>
+                <li data-lang="es">Tranquilo al poder llegar sin apuro al trabajo teniendo estacionamiento fijo</li>
+                <li data-lang="en" style="display: none;">Calm about getting to work unhurried with a fixed parking spot</li>
               </ul>
             </div>
           </div>
@@ -565,7 +556,8 @@
         <div class="empathy__persona fade-in">
           <div class="empathy__header">
             <div class="empathy__avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              <img src="assets/img/user2.jpg" alt="Martina">
+              <span class="empathy__badge"><i data-lucide="car" aria-hidden="true"></i></span>
             </div>
             <h3 class="empathy__name">Martina</h3>
           </div>
@@ -574,40 +566,40 @@
               <span class="empathy__quad-label" data-lang="es">Dice</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Says</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Pago demasiado por varios cocheras"</li>
-                <li data-lang="en" style="display: none;">"I pay too much for several garages"</li>
-                <li data-lang="es">"Quiero gestionar todo en un lugar"</li>
-                <li data-lang="en" style="display: none;">"I want to manage everything in one place"</li>
+                <li data-lang="es">Con todas las vueltas que daba antes me ponía nerviosa rayar el auto</li>
+                <li data-lang="en" style="display: none;">With all the circling I used to do, I got nervous about scratching the car</li>
+                <li data-lang="es">Parece exagerado pero la app me mejoró las jornadas laborales</li>
+                <li data-lang="en" style="display: none;">It sounds exaggerated but the app improved my workdays</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Hace</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Does</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Lleva control manual de pagos</li>
-                <li data-lang="en" style="display: none;">Keeps manual payment records</li>
-                <li data-lang="es">Reserva espacios por adelantado</li>
-                <li data-lang="en" style="display: none;">Books spots in advance</li>
+                <li data-lang="es">Busca plan de suscripción que le sirva según la cantidad de horas que usaría por mes</li>
+                <li data-lang="en" style="display: none;">Looks for a subscription plan that suits her based on the hours she would use per month</li>
+                <li data-lang="es">Si va a tarifado público lo paga por la app</li>
+                <li data-lang="en" style="display: none;">If she uses the public pay-as-you-go rate, she pays for it through the app</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Piensa</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Thinks</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Debería haber descuentos por volumen"</li>
-                <li data-lang="en" style="display: none;">"There should be volume discounts"</li>
-                <li data-lang="es">"La tecnología puede simplificar esto"</li>
-                <li data-lang="en" style="display: none;">"Technology can simplify this"</li>
+                <li data-lang="es">Ya no más dar vueltas por varios minutos apurada para conseguir lugar</li>
+                <li data-lang="en" style="display: none;">No more driving around for several minutes in a hurry to find a spot</li>
+                <li data-lang="es">Qué alivio</li>
+                <li data-lang="en" style="display: none;">What a relief</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Siente</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Feels</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Ansiedad con múltiples vencimientos</li>
-                <li data-lang="en" style="display: none;">Anxiety with multiple due dates</li>
-                <li data-lang="es">Satisfacción al ahorrar con planes</li>
-                <li data-lang="en" style="display: none;">Satisfaction from saving with plans</li>
+                <li data-lang="es">Relajada, hacer trámites realmente la estresaban por no encontrar lugar</li>
+                <li data-lang="en" style="display: none;">Relaxed; running errands really stressed her out for not finding a spot</li>
+                <li data-lang="es">Agradecida porque ahora siempre sabe dónde hay lugar para dejar el auto</li>
+                <li data-lang="en" style="display: none;">Grateful because she always knows where there is a spot to leave the car</li>
               </ul>
             </div>
           </div>
@@ -615,7 +607,8 @@
         <div class="empathy__persona fade-in">
           <div class="empathy__header">
             <div class="empathy__avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              <img src="assets/img/user3.jpg" alt="Beto">
+              <span class="empathy__badge"><i data-lucide="warehouse" aria-hidden="true"></i></span>
             </div>
             <h3 class="empathy__name">Beto</h3>
           </div>
@@ -624,40 +617,42 @@
               <span class="empathy__quad-label" data-lang="es">Dice</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Says</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Mis cocheras están vacías a menudo"</li>
-                <li data-lang="en" style="display: none;">"My garages are often empty"</li>
-                <li data-lang="es">"Quiero publicar fácil y cobrar seguro"</li>
-                <li data-lang="en" style="display: none;">"I want easy listing and safe payments"</li>
+                <li data-lang="es">¿Qué beneficios tiene adherirme a la red?</li>
+                <li data-lang="en" style="display: none;">What do I get out of joining the network?</li>
+                <li data-lang="es">Espero que la aplicación sea fácil de usar porque no me lleve bien con todo eso</li>
+                <li data-lang="en" style="display: none;">I hope the app is easy to use because I am not good with all that</li>
+                <li data-lang="es">Y que no tenga letra chiquitita</li>
+                <li data-lang="en" style="display: none;">And that it does not have tiny print</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Hace</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Does</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Publica en redes y grupos locales</li>
-                <li data-lang="en" style="display: none;">Posts on social media and local groups</li>
-                <li data-lang="es">Cobra en efectivo a cada inquilino</li>
-                <li data-lang="en" style="display: none;">Collects cash from each tenant</li>
+                <li data-lang="es">Publica los 20 cupos que tiene disponibles en su local</li>
+                <li data-lang="en" style="display: none;">Publishes the 20 spots he has available at his place</li>
+                <li data-lang="es">Agrega un cartel de la app en la fachada para que lo encuentren con facilidad</li>
+                <li data-lang="en" style="display: none;">Adds a sign with the app on the façade so people find him easily</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Piensa</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Thinks</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Hay demanda que no estoy viendo"</li>
-                <li data-lang="en" style="display: none;">"There is demand I am not seeing"</li>
-                <li data-lang="es">"Una plataforma daría más alcance"</li>
-                <li data-lang="en" style="display: none;">"A platform would give more reach"</li>
+                <li data-lang="es">Capaz podrá conseguir mayor visibilidad</li>
+                <li data-lang="en" style="display: none;">Maybe he can gain more visibility</li>
+                <li data-lang="es">Sabré en qué momentos del día quedan cupos libres y llevar un mejor control de los cupos y pagos</li>
+                <li data-lang="en" style="display: none;">I will know what times of day have free spots and keep better control of spots and payments</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Siente</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Feels</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Incertidumbre con la morosidad</li>
-                <li data-lang="en" style="display: none;">Uncertainty about late payments</li>
-                <li data-lang="es">Optimismo al ver ingresos pasivos</li>
-                <li data-lang="en" style="display: none;">Optimism at passive income potential</li>
+                <li data-lang="es">Ya no se abruma como antes por llevar el control de todo el negocio manualmente</li>
+                <li data-lang="en" style="display: none;">He no longer feels overwhelmed like before from running the whole business manually</li>
+                <li data-lang="es">Que ahora su negocio está bien aprovechado, por él y por sus clientes</li>
+                <li data-lang="en" style="display: none;">That his business is now well utilized, by him and his customers</li>
               </ul>
             </div>
           </div>
@@ -665,7 +660,8 @@
         <div class="empathy__persona fade-in">
           <div class="empathy__header">
             <div class="empathy__avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              <img src="assets/img/user4.jpg" alt="Ana">
+              <span class="empathy__badge"><i data-lucide="warehouse" aria-hidden="true"></i></span>
             </div>
             <h3 class="empathy__name">Ana</h3>
           </div>
@@ -674,40 +670,40 @@
               <span class="empathy__quad-label" data-lang="es">Dice</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Says</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"Solo necesito un rato esta tarde"</li>
-                <li data-lang="en" style="display: none;">"I just need a spot this afternoon"</li>
-                <li data-lang="es">"No quiero suscribirme a nada"</li>
-                <li data-lang="en" style="display: none;">"I do not want to subscribe to anything"</li>
+                <li data-lang="es">Me es más cómodo usar esta única app</li>
+                <li data-lang="en" style="display: none;">It is more comfortable for me to use this single app</li>
+                <li data-lang="es">Sé que la gente prefiere una plataforma centralizada por eso publico ahí</li>
+                <li data-lang="en" style="display: none;">I know people prefer a centralized platform, that is why I publish there</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Hace</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Does</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Busca lugares al último momento</li>
-                <li data-lang="en" style="display: none;">Searches for spots at the last minute</li>
-                <li data-lang="es">Pregunta a amigos por recomendaciones</li>
-                <li data-lang="en" style="display: none;">Asks friends for recommendations</li>
+                <li data-lang="es">Publica el garaje en la app con opción a modalidad: fija, u horario dividido</li>
+                <li data-lang="en" style="display: none;">Publishes the garage in the app with options: fixed, or split schedule</li>
+                <li data-lang="es">Recibe notificación de pago ingresado para no tener que estar revisando</li>
+                <li data-lang="en" style="display: none;">Gets a payment received notification so she does not have to keep checking</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Piensa</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Thinks</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">"¿Y si llego y no hay lugar?"</li>
-                <li data-lang="en" style="display: none;">"What if I arrive and there is no spot?"</li>
-                <li data-lang="es">"Prefiero pagar un poco más por asegurar"</li>
-                <li data-lang="en" style="display: none;">"I would pay a bit more to be sure"</li>
+                <li data-lang="es">Ahora voy a estar más cómoda a fin de mes con el pago automático del alquiler</li>
+                <li data-lang="en" style="display: none;">Now I will be more comfortable at the end of the month with the automatic rent payment</li>
+                <li data-lang="es">También voy a poder ver las calificaciones de quien quiere alquilar</li>
+                <li data-lang="en" style="display: none;">I will also be able to see the ratings of whoever wants to rent</li>
               </ul>
             </div>
             <div class="empathy__quad">
               <span class="empathy__quad-label" data-lang="es">Siente</span>
               <span class="empathy__quad-label" data-lang="en" style="display: none;">Feels</span>
               <ul class="empathy__quad-list">
-                <li data-lang="es">Estrés al llegar tarde a un evento</li>
-                <li data-lang="en" style="display: none;">Stress from arriving late to an event</li>
-                <li data-lang="es">Confianza con la confirmación inmediata</li>
-                <li data-lang="en" style="display: none;">Confidence with instant confirmation</li>
+                <li data-lang="es">Me irritaba tener que checar en cada plataforma que publicaba el garaje</li>
+                <li data-lang="en" style="display: none;">It irritated me to have to check every platform where I published the garage</li>
+                <li data-lang="es">Tranquila al poder llegar sin apuro al trabajo teniendo estacionamiento fijo</li>
+                <li data-lang="en" style="display: none;">Calm about getting to work unhurried with a fixed parking spot</li>
               </ul>
             </div>
           </div>
@@ -729,9 +725,7 @@
         <div class="research__cards">
           <div class="research__card fade-in">
             <div class="research__card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <i data-lucide="circle-dollar-sign" aria-hidden="true"></i>
             </div>
             <h3 class="research__card-title" data-lang="es">Reducción de costos</h3>
             <h3 class="research__card-title" data-lang="en" style="display: none;">Cost reduction</h3>
@@ -741,9 +735,7 @@
           
           <div class="research__card fade-in">
             <div class="research__card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-              </svg>
+              <i data-lucide="search" aria-hidden="true"></i>
             </div>
             <h3 class="research__card-title" data-lang="es">Búsqueda fácil</h3>
             <h3 class="research__card-title" data-lang="en" style="display: none;">Easy search</h3>
@@ -753,9 +745,7 @@
           
           <div class="research__card fade-in">
             <div class="research__card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
-              </svg>
+              <i data-lucide="store" aria-hidden="true"></i>
             </div>
             <h3 class="research__card-title" data-lang="es">Plataforma única</h3>
             <h3 class="research__card-title" data-lang="en" style="display: none;">Unified platform</h3>
@@ -765,9 +755,7 @@
           
           <div class="research__card fade-in">
             <div class="research__card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <i data-lucide="clock" aria-hidden="true"></i>
             </div>
             <h3 class="research__card-title" data-lang="es">Gestión simple</h3>
             <h3 class="research__card-title" data-lang="en" style="display: none;">Simple management</h3>
@@ -781,9 +769,7 @@
         <div class="research__persona">
           <div class="research__persona-header">
             <div class="research__persona-avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
+              <i data-lucide="user-round" aria-hidden="true"></i>
             </div>
             <div>
               <h4 class="research__persona-name" data-lang="es">Usuario promedio</h4>
@@ -827,8 +813,6 @@
         <div class="competitors__card fade-in">
           <div class="competitors__logo">P</div>
           <h3 class="competitors__name">Parkopedia</h3>
-          <span class="competitors__badge" data-lang="es">Activo</span>
-          <span class="competitors__badge" data-lang="en" style="display: none;">Active</span>
           <p class="competitors__desc" data-lang="es">Directorio global de estacionamientos con precios y disponibilidad. Fuerte en búsqueda, débil en alquiler residencial y suscripciones.</p>
           <p class="competitors__desc" data-lang="en" style="display: none;">Global parking directory with prices and availability. Strong in search, weak in residential rentals and subscriptions.</p>
           <a class="competitors__link" href="https://www.parkopedia.com" target="_blank" rel="noopener">parkopedia.com</a>
@@ -836,8 +820,6 @@
         <div class="competitors__card fade-in">
           <div class="competitors__logo">U</div>
           <h3 class="competitors__name">Urpark</h3>
-          <span class="competitors__badge competitors__badge--inactive" data-lang="es">Inactivo</span>
-          <span class="competitors__badge competitors__badge--inactive" data-lang="en" style="display: none;">Inactive</span>
           <p class="competitors__desc" data-lang="es">App local de reserva de estacionamientos que dejó de operar. Validó la demanda del mercado sin sostener el modelo de negocio.</p>
           <p class="competitors__desc" data-lang="en" style="display: none;">Local parking reservation app that stopped operating. Validated market demand without sustaining its business model.</p>
           <a class="competitors__link" href="#" onclick="return false;">urpark (offline)</a>
@@ -845,8 +827,6 @@
         <div class="competitors__card fade-in">
           <div class="competitors__logo">V</div>
           <h3 class="competitors__name">View Parking</h3>
-          <span class="competitors__badge" data-lang="es">Activo</span>
-          <span class="competitors__badge" data-lang="en" style="display: none;">Active</span>
           <p class="competitors__desc" data-lang="es">Reserva de estacionamientos en destinos comerciales y aeropuertos. Enfocado en transacciones puntuales, no en comunidad ni suscripción.</p>
           <p class="competitors__desc" data-lang="en" style="display: none;">Parking reservation at commercial destinations and airports. Focused on one-off transactions, not community or subscription.</p>
           <a class="competitors__link" href="https://www.viewparking.com" target="_blank" rel="noopener">viewparking.com</a>
@@ -854,8 +834,6 @@
         <div class="competitors__card fade-in">
           <div class="competitors__logo">E</div>
           <h3 class="competitors__name">EasyPark</h3>
-          <span class="competitors__badge" data-lang="es">Activo</span>
-          <span class="competitors__badge" data-lang="en" style="display: none;">Active</span>
           <p class="competitors__desc" data-lang="es">Pago móvil de estacionamiento público. Cubre la transacción de calle, pero no marketplace de cocheras privadas ni venta de espacios.</p>
           <p class="competitors__desc" data-lang="en" style="display: none;">Mobile payment for public street parking. Covers the curb transaction, but not private garage marketplace or spot sales.</p>
           <a class="competitors__link" href="https://www.easypark.com" target="_blank" rel="noopener">easypark.com</a>
@@ -874,7 +852,7 @@
       <div class="value__grid">
         <div class="value__card fade-in">
           <div class="value__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/></svg>
+            <i data-lucide="store" aria-hidden="true"></i>
           </div>
           <h3 class="value__title" data-lang="es">Plataforma única</h3>
           <h3 class="value__title" data-lang="en" style="display: none;">Unified platform</h3>
@@ -883,7 +861,7 @@
         </div>
         <div class="value__card fade-in">
           <div class="value__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"/></svg>
+            <i data-lucide="ticket" aria-hidden="true"></i>
           </div>
           <h3 class="value__title" data-lang="es">Sistema de suscripción</h3>
           <h3 class="value__title" data-lang="en" style="display: none;">Subscription system</h3>
@@ -892,7 +870,7 @@
         </div>
         <div class="value__card fade-in">
           <div class="value__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <i data-lucide="clock" aria-hidden="true"></i>
           </div>
           <h3 class="value__title" data-lang="es">Reserva en segundos</h3>
           <h3 class="value__title" data-lang="en" style="display: none;">Book in seconds</h3>
@@ -1155,11 +1133,6 @@
           <span data-lang="es">Contenido</span>
           <span data-lang="en" style="display: none;">Content</span>
         </div>
-        <div class="ia__legend-item">
-          <span class="ia__legend-swatch ia__legend-swatch--tbd"></span>
-          <span data-lang="es">Por definir</span>
-          <span data-lang="en" style="display: none;">To be defined</span>
-        </div>
       </div>
       <div class="ia__tree">
         <div class="ia__branch fade-in">
@@ -1173,8 +1146,8 @@
               <div class="ia__content" data-lang="en" style="display: none;">Search near me</div>
               <div class="ia__content" data-lang="es">Espacios destacados</div>
               <div class="ia__content" data-lang="en" style="display: none;">Featured spots</div>
-              <div class="ia__content ia__content--tbd" data-lang="es">Filtros rápidos (TBD)</div>
-              <div class="ia__content ia__content--tbd" data-lang="en" style="display: none;">Quick filters (TBD)</div>
+              <div class="ia__content" data-lang="es">Filtros rápidos</div>
+              <div class="ia__content" data-lang="en" style="display: none;">Quick filters</div>
             </div>
           </div>
         </div>
@@ -1205,8 +1178,8 @@
               <div class="ia__content" data-lang="en" style="display: none;">Subscription plans</div>
               <div class="ia__content" data-lang="es">Historial de pagos</div>
               <div class="ia__content" data-lang="en" style="display: none;">Payment history</div>
-              <div class="ia__content ia__content--tbd" data-lang="es">Promociones (TBD)</div>
-              <div class="ia__content ia__content--tbd" data-lang="en" style="display: none;">Promotions (TBD)</div>
+              <div class="ia__content" data-lang="es">Promociones</div>
+              <div class="ia__content" data-lang="en" style="display: none;">Promotions</div>
             </div>
           </div>
         </div>
@@ -1237,8 +1210,8 @@
               <div class="ia__content" data-lang="en" style="display: none;">Listing moderation</div>
               <div class="ia__content" data-lang="es">Usuarios y roles</div>
               <div class="ia__content" data-lang="en" style="display: none;">Users and roles</div>
-              <div class="ia__content ia__content--tbd" data-lang="es">Reportes (TBD)</div>
-              <div class="ia__content ia__content--tbd" data-lang="en" style="display: none;">Reports (TBD)</div>
+              <div class="ia__content" data-lang="es">Reportes</div>
+              <div class="ia__content" data-lang="en" style="display: none;">Reports</div>
             </div>
           </div>
         </div>
@@ -1615,9 +1588,7 @@
       <div class="learnings__grid">
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
+            <i data-lucide="user-round" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Investigación de usuarios</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">User research</h3>
@@ -1627,9 +1598,7 @@
         
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-            </svg>
+            <i data-lucide="paintbrush" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Sistema de diseño</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">Design system</h3>
@@ -1639,9 +1608,7 @@
         
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-            </svg>
+            <i data-lucide="code" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Desarrollo fullstack</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">Fullstack development</h3>
@@ -1651,10 +1618,7 @@
         
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.18A1.5 1.5 0 014 17.035V5.965a1.5 1.5 0 012.036-1.415l5.384 3.18a1.5 1.5 0 010 2.46z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-            </svg>
+            <i data-lucide="circle-play" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Pruebas de usabilidad</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">Usability testing</h3>
@@ -1664,10 +1628,7 @@
         
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
-            </svg>
+            <i data-lucide="camera" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Integración frontend-backend</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">Frontend-backend integration</h3>
@@ -1677,9 +1638,7 @@
         
         <div class="learnings__card fade-in">
           <div class="learnings__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
-            </svg>
+            <i data-lucide="presentation" aria-hidden="true"></i>
           </div>
           <h3 class="learnings__card-title" data-lang="es">Resolución de problemas</h3>
           <h3 class="learnings__card-title" data-lang="en" style="display: none;">Problem solving</h3>
@@ -1731,10 +1690,7 @@
           </svg>
         </a>
         <a href="mailto:maria.maspoli@outlook.es" class="cta__social-link" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
+          <i data-lucide="mail" stroke-width="2" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -1750,6 +1706,7 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@1.49.0/dist/umd/lucide.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

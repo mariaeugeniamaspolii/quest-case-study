@@ -16,6 +16,7 @@ This is a **simple landing**, not a product app. Do not over-architecture it.
 | Styles | SCSS → compiled `css/styles.css` |
 | Behavior | Vanilla JS (`js/main.js`) |
 | Motion | GSAP 3.12.2 + ScrollTrigger (CDN) |
+| Icons | Lucide 1.49.0 (CDN, `<i data-lucide>` placeholders) |
 | Fonts | Space Grotesk (Google Fonts) |
 | Images | Local WebP in `assets/img/` |
 
@@ -80,13 +81,13 @@ Each section: `<section class="block section" id="block">` + `div.container`.
 
 ### Internationalization (i18n)
 
-Two delivery models — keep them consistent:
+**One single toggle button** (top-right), label = **target language** (`EN` while reading ES, `ES` while reading EN). Two delivery models:
 
 1. **`index.html` (ES page)** — bilingual DOM. Every meaningful text node is duplicated:
    - `data-lang="es"` visible by default
    - `data-lang="en" style="display: none;"` hidden
-   - JS (`langToggle`) toggles `display` on `[data-lang]`.
-2. **`en/index.html` (EN page)** — English only. No `data-lang` on content (lang buttons only). ES button navigates to `../index.html`.
+   - Single button (`.lang-btn[data-lang-btn]`, no `data-lang` on it) toggles `display` on `[data-lang]` in place — no reload; label flips EN↔ES.
+2. **`en/index.html` (EN page)** — English only. No `data-lang` on content. Single ES button (`.lang-btn` + inline `onclick`) navigates to `../index.html`.
 
 **Always update ES and EN together** when copy or structure changes.
 
@@ -109,6 +110,15 @@ Do not add nav links without an explicit user request. Full section list remains
 ### Footer year
 
 Copyright year is **dynamic**: elements with class `js-year` are set to `new Date().getFullYear()` in JS. Static fallback in HTML is the current year at edit time. Hero meta “Year: 2022” is the **project year** and must stay 2022.
+
+### Icons (Lucide via CDN)
+
+All content icons come from **Lucide** (pinned `lucide@1.49.0` UMD on jsDelivr), loaded the same way as GSAP:
+
+- Markup: `<i data-lucide="name" aria-hidden="true"></i>` — one placeholder per icon, identical on ES and EN pages.
+- `lucide.createIcons({ attrs: { 'stroke-width': 1.5 } })` runs once on `DOMContentLoaded` (guarded — page renders fine if the CDN fails, same as GSAP).
+- To swap an icon, change the `data-lucide` name (catalog: https://lucide.dev/icons). **Always update ES and EN together.**
+- Inline SVG kept in the CTA: `linkedin` and `github` (Lucide has no brand icons). CTA `mail` is Lucide with `stroke-width="2"` on the element, matching its Feather-style siblings.
 
 ## Code conventions
 
@@ -146,7 +156,7 @@ See `docs/DESIGN.md` for palette, type scale, components, and motion.
 - Keep meaningful `alt` on content images.
 - Prefer `aria-label` on icon-only links.
 - External `target="_blank"` → add `rel="noopener noreferrer"` when touching those links.
-- Decorative SVGs: `aria-hidden="true"` when editing that markup.
+- Decorative icons: keep `aria-hidden="true"` on `<i data-lucide>` placeholders and inline CTA SVGs.
 - Do not remove existing landmarks (`nav`, `footer`).
 
 ## Relevant commands
@@ -187,7 +197,6 @@ There are **no** lint, test, or typecheck scripts.
 ## Known issues (document only — do not fix unless asked)
 
 - `--color-white-a70` referenced in `.value` without being defined (falls back).
-- `en/index.html` has a leftover `class="data-lang-en"` on one list item.
 - `assets/img/quest2.webp` is unused.
 - Font loaded twice (HTML `<link>` + SCSS `@import`).
 - Several `target="_blank"` lack `rel="noopener noreferrer"`.

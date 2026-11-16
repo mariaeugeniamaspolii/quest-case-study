@@ -1,45 +1,63 @@
-// GSAP and ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+// GSAP and ScrollTrigger (optional — page still works without CDN)
+const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+if (hasGsap) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
-// Language Toggle
+// Lucide Icons (optional — page still works without CDN)
+const lucideIcons = {
+  init() {
+    if (typeof lucide === 'undefined') return;
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+  }
+};
+
+// Language Toggle (single button, label = target language)
 const langToggle = {
   init() {
-    this.buttons = document.querySelectorAll('.lang-btn');
-    this.esContent = document.querySelectorAll('[data-lang="es"]');
-    this.enContent = document.querySelectorAll('[data-lang="en"]');
+    this.button = document.querySelector('.lang-btn[data-lang-btn]');
+    if (!this.button) return; // EN page: inline onclick navigates to the ES page
+    this.content = document.querySelectorAll('[data-lang]');
     
-    this.buttons.forEach(btn => {
-      btn.addEventListener('click', () => this.toggle(btn.dataset.lang));
+    this.button.addEventListener('click', () => {
+      const next = this.button.dataset.state === 'es' ? 'en' : 'es';
+      this.apply(next);
+      this.updateUrl(next);
     });
     
-    // Check URL for language preference
-    const urlLang = window.location.pathname.includes('/en/') ? 'en' : 'es';
-    this.setLanguage(urlLang);
-  },
-  
-  toggle(lang) {
-    this.setLanguage(lang);
-    // Update URL without reload
-    const url = new URL(window.location);
-    if (lang === 'en') {
-      url.pathname = url.pathname.replace(/^\/en\//, '/');
-      if (!url.pathname.startsWith('/en/')) {
-        url.pathname = '/en' + url.pathname;
-      }
-    } else {
-      url.pathname = url.pathname.replace(/^\/en\//, '/');
-    }
-    history.pushState({}, '', url);
-  },
-  
-  setLanguage(lang) {
-    this.buttons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
+    window.addEventListener('popstate', () => {
+      this.apply(window.location.pathname.includes('/en/') ? 'en' : 'es');
     });
     
-    document.querySelectorAll('[data-lang]').forEach(el => {
+    // Respect URL (e.g. dev server serving the ES file under /en/)
+    this.apply(window.location.pathname.includes('/en/') ? 'en' : 'es');
+  },
+  
+  apply(lang) {
+    this.button.dataset.state = lang;
+    // Show target language: "EN" while reading ES, "ES" while reading EN
+    this.button.textContent = lang === 'es' ? 'EN' : 'ES';
+    this.content.forEach(el => {
       el.style.display = el.dataset.lang === lang ? '' : 'none';
     });
+  },
+  
+  updateUrl(lang) {
+    // Push language to URL (may fail on file:// protocol)
+    try {
+      const url = new URL(window.location);
+      if (lang === 'en') {
+        url.pathname = url.pathname.replace(/^\/en\//, '/');
+        if (!url.pathname.startsWith('/en/')) {
+          url.pathname = '/en' + url.pathname;
+        }
+      } else {
+        url.pathname = url.pathname.replace(/^\/en\//, '/');
+      }
+      history.pushState({}, '', url);
+    } catch (e) {
+      // file://: language already switched, URL update is cosmetic
+    }
   }
 };
 
@@ -252,10 +270,13 @@ const footerYear = {
 
 // Initialize Everything
 document.addEventListener('DOMContentLoaded', () => {
+  lucideIcons.init();
   langToggle.init();
   fadeAnimations.init();
-  heroAnimation.init();
-  timelineAnimation.init();
+  if (hasGsap) {
+    heroAnimation.init();
+    timelineAnimation.init();
+  }
   galleryScroll.init();
   smoothScroll.init();
   activeNav.init();

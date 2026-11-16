@@ -14,6 +14,7 @@ All tokens live in `scss/_variables.scss`.
 |-------|-------|------|
 | `--color-primary` | `#1541B3` | Brand accent, labels, buttons, icons, links |
 | `--color-primary-rgb` | `16 53 147` | For alpha compositing |
+| `--color-primary-light` | `#AFC4F7` | IA second level (“section”), journey step detail |
 | `--color-dark` | `#00081E` | Page background, dark section backgrounds, text on light |
 | `--color-dark-rgb` | `0 8 30` | Alpha compositing |
 | `--color-light` | `#F8F8F8` | Cards on white sections |
@@ -23,12 +24,6 @@ All tokens live in `scss/_variables.scss`.
 | `--color-black-rgb` | `0 0 0` | Alpha compositing |
 | `--color-gray` | `#6B7280` | Secondary text |
 | `--color-gray-light` | `#E5E7EB` | Subtle borders, timeline track |
-| `--color-danger` | `#DC2626` | “Inactive” badge |
-| `--color-success` | `#22C55E` | Journey step “action” |
-| `--color-warning` | `#FBBF24` | Journey step “data” |
-| `--color-purple` | `#7C3AED` | Information architecture only |
-| `--color-purple-light` | `#C4B5FD` | IA secondary |
-| `--color-red-light` | `#FCA5A5` | IA “TBD” states |
 
 ### Alpha tokens
 
@@ -38,7 +33,6 @@ Pattern: `rgb(var(--color-*-rgb) / N%)`.
 - **White:** `a02`, `a03`, `a05`, `a10`, `a20`
 - **Black:** `a05`, `a30`, `a40`, `a50`
 - **Dark:** `a90` (nav background)
-- **Danger:** `a12`
 
 ### Section background rhythm
 
@@ -183,12 +177,11 @@ Uppercase, wide tracking, xs, primary — reused on almost every section header.
 
 Square 40–60px, primary background, `radius-md` or `full`, SVG stroke white (20–28px). Inverse variant on primary section (`.value__icon`): primary-a10 fill, primary stroke.
 
+**Icon source:** Lucide (CDN 1.49.0) via `<i data-lucide="…">` placeholders rendered on `DOMContentLoaded`; global `stroke-width: 1.5`, `currentColor` inherits the box stroke color. CTA social icons use `stroke-width: 2` (`linkedin`/`github` remain inline Feather SVGs — Lucide has no brand icons).
+
 ### Badges / chips
 
-- Pill, uppercase, `3xs`, semibold
-- Default: primary-a10 on primary
-- `--inactive`: danger-a12 on danger
-- Tool chips (hero): primary-a20 fill, primary text
+- Tool chips (hero): primary-a20 fill, primary text, `radius-xl`, `xs`
 
 ### Navigation (`.nav`, `_nav.scss`)
 
@@ -199,7 +192,7 @@ Square 40–60px, primary background, `radius-md` or `full`, SVG stroke white (2
 
 ### Language toggle (`.ui` / `_ui.scss`)
 
-Fixed top-right, two pill buttons, active = primary fill.
+Fixed top-right, **single pill button**, primary fill (always `active`), label = target language (`EN` on the ES page, `ES` on the EN page).
 
 ### Footer (`.footer`, `_footer.scss`)
 

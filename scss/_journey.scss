@@ -70,7 +70,7 @@
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--color-white);
-    background-color: var(--color-success);
+    background-color: var(--color-primary);
     border-radius: var(--radius-sm);
     padding: var(--space-3) var(--space-4);
     text-align: center;
@@ -78,8 +78,8 @@
 
   &__step-detail {
     font-size: var(--font-size-2xs);
-    color: var(--color-gray);
-    background-color: var(--color-light);
+    color: var(--color-dark);
+    background-color: var(--color-primary-light);
     border-radius: var(--radius-sm);
     padding: var(--space-3) var(--space-4);
     line-height: var(--line-height-base);
@@ -88,7 +88,7 @@
   &__step-data {
     font-size: var(--font-size-2xs);
     color: var(--color-dark);
-    background-color: var(--color-warning);
+    background-color: var(--color-light);
     border-radius: var(--radius-sm);
     padding: var(--space-3) var(--space-4);
     line-height: var(--line-height-base);
